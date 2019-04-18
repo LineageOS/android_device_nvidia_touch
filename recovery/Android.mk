@@ -1,0 +1,77 @@
+include $(CLEAR_VARS)
+LOCAL_MODULE               := linker.recovery
+LOCAL_MODULE_STEM          := linker
+LOCAL_PREBUILT_MODULE_FILE := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_INTERMEDIATES)/EXECUTABLES/linker_intermediates/linker
+LOCAL_MULTILIB             := 32
+LOCAL_MODULE_SUFFIX        := .so
+LOCAL_MODULE_CLASS         := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE_PATH          := $(TARGET_RECOVERY_OUT)/root/system/bin
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE               := libc.recovery
+LOCAL_MODULE_STEM          := libc.so
+LOCAL_PREBUILT_MODULE_FILE := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_INTERMEDIATE_LIBRARIES)/libc.so
+LOCAL_MULTILIB             := 32
+LOCAL_MODULE_SUFFIX        := .so
+LOCAL_MODULE_CLASS         := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE_PATH          := $(TARGET_RECOVERY_OUT)/root/system/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE               := libdl.recovery
+LOCAL_MODULE_STEM          := libdl.so
+LOCAL_PREBUILT_MODULE_FILE := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_INTERMEDIATE_LIBRARIES)/libdl.so
+LOCAL_MULTILIB             := 32
+LOCAL_MODULE_SUFFIX        := .so
+LOCAL_MODULE_CLASS         := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE_PATH          := $(TARGET_RECOVERY_OUT)/root/system/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE               := liblog.recovery
+LOCAL_MODULE_STEM          := liblog.so
+LOCAL_PREBUILT_MODULE_FILE := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_INTERMEDIATE_LIBRARIES)/liblog.so
+LOCAL_MULTILIB             := 32
+LOCAL_MODULE_SUFFIX        := .so
+LOCAL_MODULE_CLASS         := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE_PATH          := $(TARGET_RECOVERY_OUT)/root/system/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE               := libm.recovery
+LOCAL_MODULE_STEM          := libm.so
+LOCAL_PREBUILT_MODULE_FILE := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_INTERMEDIATE_LIBRARIES)/libm.so
+LOCAL_MULTILIB             := 32
+LOCAL_MODULE_SUFFIX        := .so
+LOCAL_MODULE_CLASS         := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE_PATH          := $(TARGET_RECOVERY_OUT)/root/system/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE               := libc++.recovery
+LOCAL_MODULE_STEM          := libc++.so
+LOCAL_PREBUILT_MODULE_FILE := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_INTERMEDIATE_LIBRARIES)/libc++.so
+LOCAL_MULTILIB             := 32
+LOCAL_MODULE_SUFFIX        := .so
+LOCAL_MODULE_CLASS         := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE_PATH          := $(TARGET_RECOVERY_OUT)/root/system/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE               := libstdc++.recovery
+LOCAL_MODULE_STEM          := libstdc++.so
+LOCAL_PREBUILT_MODULE_FILE := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_INTERMEDIATE_LIBRARIES)/libstdc++.so
+LOCAL_MULTILIB             := 32
+LOCAL_MODULE_SUFFIX        := .so
+LOCAL_MODULE_CLASS         := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE_PATH          := $(TARGET_RECOVERY_OUT)/root/system/lib
+include $(BUILD_PREBUILT)
+
