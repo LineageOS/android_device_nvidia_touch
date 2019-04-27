@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,11 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-TARGET_LD_SHIM_LIBS += \
-  /system/vendor/lib/librm_ts_service.so|/system/lib/liblog.so
-
-ifneq ($(filter $(TARGET_TEGRA_TOUCH),raydium),)
-	BOARD_VENDOR_SEPOLICY_DIRS += device/nvidia/touch/sepolicy/raydium/vendor
-endif
+# Allow sysfs file access to system_app(CalibNotifier)
+allow system_app sysfs_touch_calib:file rw_file_perms;
+allow system_app user_calib_file:dir create_dir_perms;
+allow system_app user_calib_file:file create_file_perms;

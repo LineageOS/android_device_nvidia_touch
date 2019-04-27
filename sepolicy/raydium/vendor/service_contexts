@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,11 +11,5 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-TARGET_LD_SHIM_LIBS += \
-  /system/vendor/lib/librm_ts_service.so|/system/lib/liblog.so
-
-ifneq ($(filter $(TARGET_TEGRA_TOUCH),raydium),)
-	BOARD_VENDOR_SEPOLICY_DIRS += device/nvidia/touch/sepolicy/raydium/vendor
-endif
+raydium.ts_service	u:object_r:raydium_touch_service:s0
