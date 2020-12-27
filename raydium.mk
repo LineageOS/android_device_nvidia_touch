@@ -29,12 +29,12 @@ PRODUCT_PACKAGES += \
 TARGET_RECOVERY_DEVICE_MODULES := rm-wrapper
 
 # Raydium userspace is 32-bit, need to explicitly include the libs for recovery when 64-bit
-ifeq ($(TARGET_ARCH),arm64)
-	PRODUCT_PACKAGES += linker.recovery32 \
-	                    libc.recovery32 \
-	                    libdl.recovery32 \
-	                    liblog.recovery32 \
-	                    libm.recovery32 \
-	                    libc++.recovery32 \
-	                    libstdc++.recovery32
+ifeq ($(TARGET_TEGRA_VERSION),t210)
+    PRODUCT_COPY_FILES += \
+        $(OUT_DIR)/target/product/$(LINEAGE_BUILD)/system/lib/libc.so:recovery/root/sbin32/libc.so \
+        $(OUT_DIR)/target/product/$(LINEAGE_BUILD)/system/lib/libdl.so:recovery/root/sbin32/libdl.so \
+        $(OUT_DIR)/target/product/$(LINEAGE_BUILD)/system/lib/libm.so:recovery/root/sbin32/libm.so \
+        $(OUT_DIR)/target/product/$(LINEAGE_BUILD)/system/lib/liblog.so:recovery/root/sbin32/liblog.so \
+        $(OUT_DIR)/target/product/$(LINEAGE_BUILD)/system/lib/libc++.so:recovery/root/sbin32/libc++.so \
+        $(OUT_DIR)/target/product/$(LINEAGE_BUILD)/system/lib/libstdc++.so:recovery/root/sbin32/libstdc++.so
 endif
