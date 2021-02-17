@@ -15,24 +15,25 @@
 COMMON_RAYDIUM_PATH := vendor/nvidia/common/raydium
 
 PRODUCT_COPY_FILES += \
-                      $(COMMON_RAYDIUM_PATH)/lib/librm31080.so:recovery/root/sbin32/librm31080.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/hw/ts.default.so:recovery/root/sbin32/hw/ts.default.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_02_00_20.so:recovery/root/sbin32/para_10_02_00_20.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_02_00_a0.so:recovery/root/sbin32/para_10_02_00_a0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_02_00_b0.so:recovery/root/sbin32/para_10_02_00_b0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_03_00_20.so:recovery/root/sbin32/para_10_03_00_20.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_03_00_a0.so:recovery/root/sbin32/para_10_03_00_a0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_03_00_a0.so:recovery/root/sbin32/para_10_03_00_b0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_04_00_b0.so:recovery/root/sbin32/para_10_04_00_b0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_04_00_c0.so:recovery/root/sbin32/para_10_04_00_c0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_05_00_c0.so:recovery/root/sbin32/para_10_05_00_c0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_06_00_b0.so:recovery/root/sbin32/para_10_06_00_b0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_07_00_b0.so:recovery/root/sbin32/para_10_07_00_b0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_08_00_20.so:recovery/root/sbin32/para_10_08_00_20.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_08_00_a0.so:recovery/root/sbin32/para_10_08_00_a0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_08_00_b0.so:recovery/root/sbin32/para_10_08_00_b0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_09_00_c0.so:recovery/root/sbin32/para_10_09_00_c0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_09_01_c0.so:recovery/root/sbin32/para_10_09_01_c0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_09_02_c0.so:recovery/root/sbin32/para_10_09_02_c0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_0a_00_b0.so:recovery/root/sbin32/para_10_0a_00_b0.so \
-                      $(COMMON_RAYDIUM_PATH)/lib/para_10_0b_00_a0.so:recovery/root/sbin32/para_10_0b_00_a0.so
+    $(COMMON_RAYDIUM_PATH)/lib/librm31080.so:recovery/root/system/lib/librm31080.so \
+    $(COMMON_RAYDIUM_PATH)/lib/hw/ts.default.so:recovery/root/system/lib/hw/ts.default.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_02_00_20.so:recovery/root/system/lib/para_10_02_00_20.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_02_00_a0.so:recovery/root/system/lib/para_10_02_00_a0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_02_00_b0.so:recovery/root/system/lib/para_10_02_00_b0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_03_00_20.so:recovery/root/system/lib/para_10_03_00_20.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_03_00_a0.so:recovery/root/system/lib/para_10_03_00_a0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_03_00_a0.so:recovery/root/system/lib/para_10_03_00_b0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_04_00_b0.so:recovery/root/system/lib/para_10_04_00_b0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_04_00_c0.so:recovery/root/system/lib/para_10_04_00_c0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_05_00_c0.so:recovery/root/system/lib/para_10_05_00_c0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_06_00_b0.so:recovery/root/system/lib/para_10_06_00_b0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_07_00_b0.so:recovery/root/system/lib/para_10_07_00_b0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_08_00_20.so:recovery/root/system/lib/para_10_08_00_20.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_08_00_a0.so:recovery/root/system/lib/para_10_08_00_a0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_08_00_b0.so:recovery/root/system/lib/para_10_08_00_b0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_09_00_c0.so:recovery/root/system/lib/para_10_09_00_c0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_09_01_c0.so:recovery/root/system/lib/para_10_09_01_c0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_09_02_c0.so:recovery/root/system/lib/para_10_09_02_c0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_0a_00_b0.so:recovery/root/system/lib/para_10_0a_00_b0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/para_10_0b_00_a0.so:recovery/root/system/lib/para_10_0b_00_a0.so \
+    $(COMMON_RAYDIUM_PATH)/lib/touch_para_10.so:recovery/root/system/lib/touch_para_10.so

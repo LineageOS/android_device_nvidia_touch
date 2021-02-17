@@ -22,8 +22,8 @@ on boot
     start rm-wrapper
 
 #Raydium touch setting
-service rm-wrapper    /sbin/rm-wrapper
+service rm-wrapper    /system/bin/rm-wrapper
     setenv TOUCH_CONF_DIR /mnt/vendor/factory/touchscreen
     setenv TOUCH_DATA_DIR /data/vendor/misc/touchscreen
-    setenv LD_LIBRARY_PATH /sbin32/hw:/sbin32:/sbin
+    setenv LD_LIBRARY_PATH /system/lib/hw:/system/lib
     disabled
