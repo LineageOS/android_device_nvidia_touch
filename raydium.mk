@@ -16,6 +16,8 @@
 
 TARGET_TEGRA_TOUCH += raydium
 
+$(call inherit-product, device/nvidia/touch/vendor/raydium/raydium.mk)
+
 PRODUCT_PACKAGES += init.cal.rc \
 		    init.ray_touch.rc \
 		    init.recovery.ray_touch.rc
