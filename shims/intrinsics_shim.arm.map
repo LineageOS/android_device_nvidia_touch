@@ -1,0 +1,4 @@
+LIBC_PRIVATE {
+  global:
+    s_aeabi_uldivmod; # arm
+};

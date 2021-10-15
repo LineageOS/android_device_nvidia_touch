@@ -13,3 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+TARGET_LD_SHIM_LIBS += \
+  /system/vendor/lib/librm_ts_service.so|/system/lib/liblog.so
