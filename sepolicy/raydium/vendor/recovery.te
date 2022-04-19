@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (c) 2014-2018 NVIDIA CORPORATION.  All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,19 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-on init
-    # create directory for mounting factory partition
-    mkdir /mnt 0666 system system
-    mkdir /mnt/vendor 0666 system system
-    mkdir /mnt/vendor/factory 0666 system system
 
-on boot
-    start rm-wrapper
-
-#Raydium touch setting
-service rm-wrapper    /system/bin/rm-wrapper
-    setenv TOUCH_CONF_DIR /mnt/vendor/factory/touchscreen
-    setenv TOUCH_DATA_DIR /data/vendor/misc/touchscreen
-    setenv LD_LIBRARY_PATH /system/lib/hw:/system/lib
-    seclabel u:r:raydium:s0
-    disabled
+# Allow recovery to run rm-wrapper
+recovery_only(`
+  allow raydium rootfs:dir r_dir_perms;
+  allow raydium rootfs:file { entrypoint rx_file_perms };
+')
