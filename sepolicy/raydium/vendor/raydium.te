@@ -30,9 +30,6 @@ allow raydium touch_device:chr_file rw_file_perms;
 allow raydium self:capability { net_admin sys_nice };
 allow raydium self:netlink_socket create_socket_perms_no_ioctl;
 allow raydium self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
-allow raydium raydium_touch_service:service_manager add;
-allow raydium system_file:file x_file_perms;
-allow raydium shell_exec:file rx_file_perms;
 # allow raydium to search tmpfs(/mnt)
 allow raydium tmpfs:dir search;
 # allow raydium to read /sys/class/power_supply/usb/online and
